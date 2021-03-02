@@ -93,6 +93,17 @@ namespace BankingSystem3
                     ourBank.Withdraw(acnd, amount);
                 }
 
+                else if (ch == 7)
+                {
+                    Console.Write("\nEnter Account Number To Transfer : ");
+                    int facn = int.Parse(Console.ReadLine());
+                    Console.Write("\nEnter Account Number From Transfer: ");
+                    int sacn = int.Parse(Console.ReadLine());
+                    Console.Write("Enter Transfer Ammount : ");
+                    double amount = double.Parse(Console.ReadLine());
+                    ourBank.Transfer(facn, sacn, amount);
+                }
+
 
             }
 

@@ -71,7 +71,7 @@ namespace BankingSystem3
                 }
             }
             if (flag == 1)
-                Console.WriteLine("Account Not Found");
+                Console.WriteLine("\nAccount Not Found");
         }
 
 
@@ -117,6 +117,42 @@ namespace BankingSystem3
                     Console.WriteLine("\nWithdraw Successful ! \nWithdraw Ammount = $" + ammount);
                     flag = 0;
                     break;
+                }
+                else
+                {
+                    flag = 1;
+
+                }
+            }
+            if (flag == 1)
+                Console.WriteLine("\nAccount Not Found");
+        }
+
+
+        public void Transfer(int firstaccountNo,int secaccountNo, double ammount)
+        {
+            int flag = 0;
+            for (int i = 0; i < accounts.Length; i++)
+            {
+                if (accounts[i] == null)
+                {
+                    continue;
+                }
+                else if (accounts[i].AccountNumber == firstaccountNo)
+                {
+                    for(int j = 0; j<accounts.Length; i++)
+                    {
+                        if(accounts[j].AccountNumber == secaccountNo)
+                        {
+                            accounts[i].Balance += ammount;
+                            accounts[j].Balance -= ammount;
+                            Console.WriteLine("\nTransfer Successful !\nTransfer Ammount = $  " + ammount);
+                            flag = 0;
+                            break;
+                        }
+                        
+                    }
+                    
                 }
                 else
                 {
