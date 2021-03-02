@@ -13,7 +13,7 @@ namespace BankingSystem3
         private string accountName;
         private double balance;
         private Address address;
-        public static int lastnumber = 100;
+        public static int lastnumber = 100 ;
 
         public Account(int accountNumber, string accountName, double balance, Address address)
         {
@@ -59,8 +59,7 @@ namespace BankingSystem3
 
         public void PrintAccount()
         {
-            //Console.WriteLine("Account No:"+this.accountNumber+"\nAccount Name:"+this.accountName+"\nBalance:"+this.balance);
-            Console.WriteLine("Account No:{0}\nAccount Name:{1}\nBalance:{2}", this.accountNumber, this.accountName, this.balance);
+            Console.WriteLine("Account No:"+this.accountNumber+"\nAccount Name:"+this.accountName+"\nBalance:"+this.balance);
             this.address.PrintAddress();
         }
     }

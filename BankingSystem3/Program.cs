@@ -10,27 +10,14 @@ namespace BankingSystem3
     {
         static void Main(string[] args)
         {
-            //Address address1 = new Address(4,10,"Dhaka");
-            //Account account1 = new Account(1001, "Shakib", 2000, address1);
-            //account1.PrintAccount();
+            
+            Bank ourBank = new Bank("Assignment-Bank", 5);
 
-            //Account account2 = new Account(1002,"Tamim",3000,new Address(7,20,"Chittagong"));
-            //account2.PrintAccount();
-
-            Bank ourBank = new Bank("Developer's bank", 5);
-            //ourBank.AddAccount(new Account(8, "Shakib", 2000, new Address(4, 10, "Dhaka", "Bangladesh")));
-
-
-            //ourBank.PrintAllAccounts();
-            //Bank ourBank = new Bank("Developer's bank", 5);
-            //ourBank.AddAccount(new Account(1001, "Shakib", 2000, new Address(4, 10, "Dhaka")));
-            //ourBank.PrintAllAccounts();
-            //ourBank.DeleteAccount(8);
 
             for (int i = 1; i <= 10; i++)
             {
-
-                Console.WriteLine("1.Add New Account");
+                Console.WriteLine("\t\t\t"+ourBank.Name);
+                Console.WriteLine("\n1.Add New Account");
                 Console.WriteLine("2.Delete Account");
                 Console.WriteLine("3.Show Account Informain");
                 Console.WriteLine("4.Print Account Details");
