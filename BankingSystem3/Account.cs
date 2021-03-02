@@ -13,7 +13,7 @@ namespace BankingSystem3
         private string accountName;
         private double balance;
         private Address address;
-        public static int lastnumber = 1001;
+        public static int lastnumber = 100;
 
         public Account(int accountNumber, string accountName, double balance, Address address)
         {

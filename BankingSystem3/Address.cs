@@ -45,11 +45,6 @@ namespace BankingSystem3
             return "Address:House No-"+this.houseNo+", Road No-"+this.roadNo+", City-"+this.city+" ,country-"+this.country;
 
         }
-
-
-
-
-
         public void PrintAddress()
         {
             Console.WriteLine(GetAddress());
